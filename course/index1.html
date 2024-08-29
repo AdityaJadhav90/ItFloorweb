@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="course.js"></script>
+  </head>
+<body>
+  
+                <!------------------------Content-------------------------->            
+ <!-- lll -->
+ <header>
+   <div class="navbar">
+     <br>
+
+  <nav>
+      <ul class="nav-list">
+        <img src="../home/images/logo1.png" alt="logo" />
+          <li><a href="../home/home.html" class="hover-line">Home</a></li>
+          <li><a href="../team/team.html" class="hover-line">Team</a></li>
+          <li><a href="../course/index1.html" class="hover-line">Courses</a></li>
+          <li><a href="../contact/contact-us.html" class="hover-line">Contact</a></li>
+          <li><a href="../about/about.html" class="hover-line">About</a></li>
+          
+          
+          <div onclick="showcart()">
+            <i class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 28px;"></i>
+        </div>
+          
+            <button type="button" class="toggle-btn"><a href="../course/paymentcourse/payment.html">Apply</a></button>
+          
+          
+     </nav>
+</div>
+
+
+         
+      </ul>
+     
+          
+  <!-- lll -->
+
+  
+    </header>         
+    <div class="shopcart"  id="shopping-cart">
+      <ol id="list-items"></ol>
+     
+      <div class="sum">
+        toal=
+      </div>
+      <div class="button-container">
+        <button class="close-btn">Close</button>
+        <button class="checkout-btn">Total</button>
+        <button class="checkout-btn">Checkout</button>
+      </div>
+      
+    </div>   
+    
+    
+        <div class="hsec">
+           <div class="hmsg">
+                 <br></br>
+              <div class="coursesbox"><CENTER>COURSES</CENTER></div>                                          
+            </div>
+         </div>
+         
+
+           
+       <div class="blackcolor">
+            <br></br>
+            <div class="yellowline"></div>
+            <br></br>
+            <h1 id="linepop">POPULAR COURSES</h1>
+          
+                    <br></br>
+                    <br></br>
+       <div class="bluec">
+                    <br></br>
+        <div class="boxsection">
+
+            
+                <div class="box1 box" id="1" >
+                  <h1 class="picup">Java</h1>
+                  <div class="boximg1"></div>
+                  <br></br>
+                    <h1 id="boxtext">A Beginner guide to Java</h1>
+                    <p id="boxtextdown"> Learn classes  objects and various codes....... </p>
+                    <p class="btn"><a href="../course/coursesweb/javacourse.html" id="linkc"> see more</a></p>
+                    <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;" onclick="addtocart('java')"></i>
+                </div>
+
+                <div class="box2 box" >
+                  <h1 class="picup">Python</h1>
+                  <div class="boximg2"></div>
+                  <br></br>
+                    <h1 id="boxtext">A Beginner guide to Python</h1>
+                    <p id="boxtextdown"> Learn Data science,codes in python....... </p>
+                    <p class="btn"><a href="coursesweb/pythoncourse.html" id="linkc"> see more</a> </p>
+                    <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;"  onclick="addtocart('python')"></i>
+
+                </div>
+
+
+                <div class="box3 box">
+                  <h1 class="picup">Html</h1>
+                  <div class="boximg3"></div>
+                  <br></br>
+                    <h1 id="boxtext">A   Beginner guide to Html</h1>
+                    <p id="boxtextdown"> Learn web designing codes in Html.... </p>
+                    <p class="btn"> <a href="coursesweb/htmlcourse.html" id="linkc">See more</a></p>
+                    <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;"onclick="addtocart('html')" ></i>
+                </div>
+                
+                
+         </div>
+        </div>
+             
+           <div class="bluec">
+              <br></br>
+           <div class="boxsection">
+
+
+               <div class="box4 box">
+                 <h1 class="picup">C++</h1>
+                 <div class="boximg4"></div>
+                 <br></br>
+                   <h1 id="boxtext">A Beginner guide to C++</h1>
+                   <p id="boxtextdown">Learn classes objects and various codes....... </p>
+                   <p class="btn"> <a href="coursesweb/ccourse.html" id="linkc">See more</a></p>
+                   <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;" onclick="addtocart('c++')"></i>
+               </div>
+
+               <div class="box5 box">
+                <h1 class="picup">Javascript</h1>
+                <div class="boximg5"></div>
+                <br></br>
+                  <h1 id="boxtext">A Beginner guide to Javascript</h1>
+                  <p id="boxtextdown">Learn Data science,Finance codes in....... </p>
+                  <p class="btn"> <a href="coursesweb/jscourse.html" id="linkc">See more</a></p>
+                  <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;" onclick="addtocart('javascript')"></i>
+              </div>
+
+
+              <div class="box6 box">
+                <h1 class="picup">Sql</h1>
+                <div class="boximg6"></div>
+                <br></br>
+                  <h1 id="boxtext">A Beginner guide to Sql</h1>
+                  <p id="boxtextdown"> Learn classes  web designing codes in Sql....... </p>
+                  <p class="btn"><a href="coursesweb/sqlcourse.html" id="linkc">See more</a></p>
+                  <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;" onclick="addtocart('sql')"></i>
+              </div>
+
+
+       </div>
+       </div>
+
+         <div class="bluec">
+          <br></br>
+         <div class="boxsection">
+
+
+               <div class="box7 box">
+                 <h1 class="picup">AI</h1>
+                 <div class="boximg7"></div>
+                 <br></br>
+                   <h1 id="boxtext">A Beginner guide to AI</h1>
+                   <p id="boxtextdown"> Learn various things about AI....... </p>
+                   <p class="btn"> <a href="coursesweb/aicourse.html" id="linkc">See more</a></p>
+                   <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;" onclick="addtocart('ai')"></i>
+               </div>
+
+               <div class="box8 box">
+                <h1 class="picup">Machine Learing</h1>
+                <div class="boximg8"></div>
+                <br></br>
+                  <h1 id="boxtext">A Beginner guide to Machine Learing</h1>
+                  <p id="boxtextdown">Learn Predictive analytics in Machine Learing.. </p>
+                  <p class="btn"> <a href="coursesweb/micourse.html" id="linkc">See more</a></p>
+                  <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;" onclick="addtocart('machine learning')"></i>
+              </div>
+
+
+              <div class="box9 box">
+                <h1 class="picup">Data Science</h1>
+                <div class="boximg9"></div>
+                <br></br>
+                  <h1 id="boxtext">A Beginner guide to Data Science</h1>
+                  <p id="boxtextdown"> Learn Making better business decisions ....... </p>
+                  <p class="btn"><a href="coursesweb/dscourse.html" id="linkc">See more</a></p>
+                  <i id="addsymbol" class="fa-solid fa-cart-plus" style="color: #FFD43B; font-size: 30px;" onclick="addtocart('machine learning')" ></i>
+        </div>
+          </div>
+              <br><br><br>
+           
+        </div>
+         <br></br>
+        
+       <div class=msg>
+          <div class="msg1 ">
+            <p>The journey of Learning computer Languages will be fun and exicting </p>       
+          </div>
+          <div class="msgyellowline ">
+
+          </div>
+
+         <div class="msg2">
+           <P>To Acess all the Courses click on the apply option. </P>          
+         </div>
+         <div class="msg2yellowline"></div>
+         
+         <br></br> <br></br> <br></br>
+       </div>
+      </div>
+      </div>
+</div>
+
+
+
+<!-- --------------------------footer----------------------- -->
+<footer>
+      <div class="container3">
+        <div class="row1">
+          <img src="../home/images/logo1.png" alt="logo" class="logo2" />
+          <div class="col" id="company">
+            <p>
+              "Unlock the power of technology at IT Desk, where knowledge meets
+              innovation, and CAD Desk, where creativity takes shape."
+            </p>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3>Services</h3>
+            <div class="links">
+              <a href="#">Poster Design</a>
+              <a href="#">Card Design</a>
+            </div>
+          </div>
+
+          <div class="col">
+            <h3>Links</h3>
+            <div class="links">
+              <a
+                href="Computer Fundamentals: Learn about the basic components of a computer system, operating systems, file management, and computer security.
+
+                        Microsoft Office Suite: Master the core applications of Microsoft Office, including Word, Excel, PowerPoint, and Outlook. Enhance your productivity by creating professional documents, analyzing data, delivering engaging presentations, and managing emails efficiently.
+                        
+                        Internet and Web Skills: Develop proficiency in web browsing, online research, and effective information retrieval. Discover tips for safe and responsible internet use, email etiquette, and online collaboration tools."
+                >About</a
+              >
+              <a
+                href="WEB DESIGN
+                                POSTER DESIGN
+                                "
+                >Services</a
+              >
+              <a href="#">Our Policy</a>
+              <a href="Contact no: 9600960056, 9600960057">Help</a>
+            </div>
+          </div>
+
+          <div class="col" id="contact">
+            <h3>Contact</h3>
+            <div class="contact-details">
+              <i class="fa fa-location"></i>
+              <p>
+                CAD DESK & IT DESK, DHARMARAJ CHOUK, AKURDI, PUNE 411033
+                9600960054,9600960057
+                <href ="https://goo.gl/maps/Xa6jNUrrbgEnQXwf9"> </href>
+              </p>
+
+              <form action="">
+                <input type="text" placeholder="Email here..." />
+                <input type="submit" class="fsubmit" value="Submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2023 CAD DESK & IT DESK. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

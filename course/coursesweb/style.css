@@ -1,0 +1,124 @@
+* {
+  margin: 0%;
+  background-size: cover;
+}
+.back {
+  background-image: url("images1/back.jpg");
+  color: aliceblue;
+
+  background-color: black;
+  /* background-image: url("../images1/desktop-wallpaper-black-java-for-tech-java-programming.jpg");
+     */
+  background-size: cover;
+
+  font-size: 1.2rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#centerword {
+  padding-left: 48%;
+  padding-top: 20px;
+}
+#header {
+  padding-left: 41%;
+  padding-right: 27%;
+}
+.fjava {
+  background-image: url("../coursesweb/images1/Java-Features.png");
+  height: 400px;
+  width: 800px;
+  background-size: cover;
+  margin-left: 27%;
+}
+.appjavaimg {
+  background-image: url("images1/applications-of-java.webp");
+  height: 400px;
+  width: 800px;
+  background-size: cover;
+  margin-left: 27%;
+}
+.learnjavimg {
+  background-image: url("images1/1607606968tDSHhIYwXu.png");
+  height: 400px;
+  width: 800px;
+  background-size: cover;
+  margin-left: 27%;
+}
+
+.pythonimg {
+  background-image: url("images1/python.png");
+  height: 450px;
+  width: 800px;
+  background-size: cover;
+  margin-left: 27%;
+}
+.fpythonimg {
+  background-image: url("images1/Features-of-Python-1.jpg");
+  height: 450px;
+  width: 800px;
+  background-size: cover;
+  margin-left: 27%;
+}
+.apythonimg {
+  background-image: url("images1/pyapp.png");
+  height: 450px;
+  width: 800px;
+  background-size: cover;
+  margin-left: 27%;
+}
+.htmlimg {
+  background-image: url("images1/HTML-Full-Form.jpg");
+  height: 450px;
+  width: 900px;
+  background-size: cover;
+  margin-left: 23%;
+}
+.htmlelementsimg {
+  background-image: url("images1/elementsofhtml.jpg");
+  height: 450px;
+  width: 900px;
+  background-size: cover;
+  margin-left: 23%;
+}
+.htmlaaimg {
+  background-image: url("images1/html-text-attributes.jpg");
+  height: 450px;
+  width: 900px;
+  background-size: cover;
+  margin-left: 23%;
+}
+.cplusimg {
+  background-image: url("images1/cplus.jpg");
+  height: 450px;
+  width: 900px;
+  background-size: cover;
+  margin-left: 23%;
+}
+.cplusfeatureimg {
+  background-image: url("images1/Features-of-C.jpg");
+  height: 550px;
+  width: 900px;
+  background-size: cover;
+  margin-left: 23%;
+}
+.cplustools {
+  background-image: url("images1/declopkent\ of\ c++.jpg");
+  height: 550px;
+  width: 900px;
+  background-size: cover;
+  margin-left: 19%;
+}
+.aiimg {
+  background-image: url("images1/ai.jpg");
+  height: 550px;
+  width: 900px;
+  background-size: cover;
+  margin-left: 19%;
+}
+.airoboticsimg {
+  background-image: url("images1/airobotics.jpg");
+  height: 550px;
+  width: 900px;
+  background-size: cover;
+  margin-left: 19%;
+}

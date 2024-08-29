@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Feedback Form" />
+
+    <EditText
+        android:id="@+id/editname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name" />
+
+    <EditText
+        android:id="@+id/editrollno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Roll No." />
+
+    <EditText
+        android:id="@+id/editclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Class" />
+
+    <EditText
+        android:id="@+id/editfeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Feedback"
+        android:lines="3" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Feedback"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editSearchid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:lines="3" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Data"
+        android:layout_centerHorizontal="true" />
+
+</LinearLayout>
+______________________________________________________________________________________________________________________________
+package com.example.feedback;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+    SQLiteDatabase sqLiteDatabaseObj;
+    Button submitBtn, searchBtn;
+    EditText std_name, std_rollno, std_class, std_feedback, editSearchid;
+    String sname, srollno, sclass, sfeedback, sql_query;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        submitBtn = findViewById(R.id.submitBtn);
+        searchBtn = findViewById(R.id.searchBtn);
+        std_name = findViewById(R.id.editname);
+        std_rollno = findViewById(R.id.editrollno);
+        std_class = findViewById(R.id.editclass);
+        std_feedback = findViewById(R.id.editfeedback);
+        editSearchid = findViewById(R.id.editSearchid);
+
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sqLiteDatabaseObj = openOrCreateDatabase("FeedbaseDataBase", Context.MODE_PRIVATE, null);
+                sqLiteDatabaseObj.execSQL("CREATE TABLE IF NOT EXISTS Student(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name VARCHAR, rollno VARCHAR, class VARCHAR, feedback VARCHAR);");
+                sname = std_name.getText().toString();
+                srollno = std_rollno.getText().toString();
+                sclass = std_class.getText().toString();
+                sfeedback = std_feedback.getText().toString();
+                sql_query = "INSERT INTO Student (name, rollno, class, feedback) VALUES('" + sname + "', '" + srollno + "', '" + sclass + "', '" + sfeedback + "')";
+                sqLiteDatabaseObj.execSQL(sql_query);
+                Toast.makeText(getApplicationContext(), "Feedback Submitted Successfully", Toast.LENGTH_LONG).show();
+            }
+        });
+
+      SearchData.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        sid = editSearchid.getText().toString();
+        Cursor cursor = sqLiteDatabaseObj.rawQuery("SELECT name, rollno FROM AndroidJSonTable WHERE cid=" + sid, null);
+        StringBuffer buffer = new StringBuffer();
+        while (cursor.moveToNext()) {
+            String name = cursor.getString(0); // Retrieving name
+            String rollno = cursor.getString(1); // Retrieving rollno
+            buffer.append("Name: " + name + ", Roll No: " + rollno + "\n"); // Appending name and rollno
+        }
+        Toast.makeText(getApplicationContext(), buffer.toString(), Toast.LENGTH_LONG).show();
+        cursor.close(); // Closing the cursor
+    }
+});
+
+    }
+}

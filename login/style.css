@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../home/images/image5.jpg");
+  background-image: no-repeat;
+  background-size: cover;
+}
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.box form {
+  position: absolute;
+  inset: 4px;
+  background: linear-gradient(0, 0, 0);
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.box from h2 {
+  color: orangered;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.box form .inputBox {
+  position: relative;
+  background-color: transparent;
+  width: 500px;
+  margin-top: 35px;
+  border-bottom: 10px;
+  border-color: whitesmoke;
+}
+.box form .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: orangered;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 1s;
+  z-index: 10;
+}
+.box form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  pointer-events: none;
+  color: orangered;
+  font-size: 1em;
+  border-bottom: outset;
+  border-color: orange;
+}
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span {
+  color: red;
+  font: size 0.75em;
+  transform: translateY(-34px);
+}
+.box form .inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 1.5;
+  background: white;
+  overflow: hidden;
+  transition: 0.1s;
+  pointer-events: none;
+}
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i {
+  height: 44px;
+}
+.box form .links {
+  display: flex;
+  
+  justify-content: space-between;
+}
+
+.signup {
+  text-align: right;
+}
+
+.box form .links a {
+  margin: 15px 235px;
+  font: size 0.75em;
+  color: black;
+  text-decoration: none;
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2) {
+  color: orangered;
+}
+
+.box form input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: #ffa500;
+  cursor: pointer;
+  border-radius: 20px;
+}
